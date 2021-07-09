@@ -36,7 +36,7 @@ A simple connector for Cayley databases. The connector leverages the HTTP API pr
     ```
 
     We should get
-    ```json
+    ```
     {
         'result': 'Successfully wrote 2 quads.'
     }
@@ -51,9 +51,16 @@ A simple connector for Cayley databases. The connector leverages the HTTP API pr
     ```
 
     We should get
-    ```json
+    ```
     {
-        'result': [{'id': 'Alice'}, {'id': 'Shawn'}]
+        'result': [
+            {
+                'id': 'Alice'
+            }, 
+            {
+                'id': 'Shawn'
+            }
+        ]
     }
     ```
 
