@@ -26,6 +26,16 @@ A simple connector for Cayley databases. The connector leverages the HTTP API pr
 
     Note: If you would like to stick to the above choice, feel free to leave all arguments empty as this is the choice by default.
 
+1. Test the connection (optional)
+
+    Test the connection by calling
+    
+    ```python
+    cayley.ping()
+    ```
+
+    If the connection can be establised, `pong` will be printed.
+
 1. Write quads to Cayley
 
     ```python
