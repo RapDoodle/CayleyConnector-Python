@@ -105,9 +105,9 @@ class CayleyConnector:
     def ping(self):
         """Test the connection. Should print pong if success."""
         res = json.loads(requests.post(
-            self.url + f'/api/v1/query/gizmo', data='g.Emit("Pong")').text)
-        assert res['result'][0] == 'Pong'
-        print('Pong')
+            self.url + f'/api/v1/query/gizmo', data='g.Emit("pong")').text)
+        assert res['result'][0] == 'pong'
+        print('pong')
 
 
 def quad(subject, predicate, object, label = ''):
