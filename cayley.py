@@ -50,7 +50,7 @@ class CayleyConnector:
         """
         return json.loads(requests.post(self.url + '/api/v1/delete', json=body).text)
 
-    def query(self, query):
+    def query(self, query, limit = -1):
         """Query the Cayley database.
 
         Note:
@@ -61,12 +61,14 @@ class CayleyConnector:
         Args:
             query (str): The query. Usually in the form of a string of 
                 JavaScript code or JSON.
+            limit (int): Limit the number of results returned. By default:
+                -1 (unlimited).
 
         Returns:
             dict: A dictionary of the response object.
         """
         return json.loads(requests.post(
-            self.url + f'/api/v1/query/{self.query_engine}', data=query).text)
+            self.url + f'/api/v1/query/{self.query_engine}?limit={limit}', data=query).text)
 
     def query_shape(self, query):
         """Query shape.
